@@ -1,0 +1,39 @@
+#!/usr/bin/env ruby
+
+# console loads up the env
+
+require "optparse"
+require "irb/completion"
+require "irb"
+initializer = File.expand_path("../../initialize", __FILE__)
+require initializer
+
+irb = RUBY_PLATFORM =~ /(:?mswin|mingw)/ ? "irb.bat" : "irb"
+libs =  " -r irb/completion"
+libs << " -r #{initializer}"
+
+ENV["ENV"] ||= "development"
+
+input_options = {}
+OptionParser.new do |opts|
+  opts.banner = "Usage: example.rb [options]"
+
+  opts.on("-v", "--verbose", "Run verbosely") do |v|
+    input_options[:verbose] = v
+    ENV["VERBOSE"] = "true"
+  end
+
+  opts.on("-p", "--print-db", "Print database logging") do |v|
+    input_options[:verbose_db] = v
+    libs << " -r config/initializers/verbose_db"
+  end
+
+  opts.on("-e", "--environment [ENVIRONMENT]", "Set the environment") do |v|
+    input_options[:environment] = v
+    ENV["ENV"] = v
+  end
+end.parse!
+
+puts "Launching Renotify console in #{ENV["ENV"]} environment"
+exec "#{irb} -I lib/ #{libs}"
+
