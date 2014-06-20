@@ -5,7 +5,7 @@ gem "sinatra-contrib"
 gem "rake"
 gem "mongoid"
 gem "rack"
-gem "unicorn"
+gem "thin"
 
 group :development, :test do
   gem "capistrano", "~> 2.15.4"
