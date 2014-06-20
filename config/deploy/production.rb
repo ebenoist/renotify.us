@@ -5,4 +5,4 @@ set :default_environment, {
   'PATH' => "$HOME/.rbenv/shims:$HOME/.rbenv/bin:$PATH"
 }
 
-role :app, "deploy@api.arrivalboard.com"
+role :app, "deploy@renotify.us"
