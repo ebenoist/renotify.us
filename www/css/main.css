@@ -1,4 +1,15 @@
 .jumbotron {
-  background-color: #31b720;
   color: white;
+}
+
+.closed {
+  background-color: #f4cb12;
+}
+
+.connected {
+  background-color: #31b720;
+}
+
+.error {
+  background-color: #ad190c;
 }

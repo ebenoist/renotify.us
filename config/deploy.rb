@@ -1,7 +1,6 @@
 require "bundler/capistrano"
 require "capistrano/ext/multistage"
 
-set :application, "erikbenoist.com"
 set :repository, "git@github.com:ebenoist/renotify.us.git"
 set :stages, %w(production)
 

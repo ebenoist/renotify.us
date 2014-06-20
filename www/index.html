@@ -1,7 +1,7 @@
 <html>
   <head>
     <title>
-      Renotify
+      ReNotify
     </title>
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
@@ -12,21 +12,20 @@
   <body>
     <div class="container">
       <div class="header">
-        <h3 class="text-muted">Renotify</h3>
+        <h3 class="text-muted">ReNotify</h3>
       </div>
 
       <div class="jumbotron">
-        <h2>Connected!</h2>
-        <p class="lead">
-          Last message.
-        </p>
+        <h2>
+          <span id="status">
+          </span>
+        </h2>
+        <p class="lead" id="last-message"> </p>
         <div id="chat-log"></div>
         <button class="btn btn-warning" id="access-request">
           Allow Notifications
         </button>
       </div>
-
-
       <div class="footer">
         <p>&copy; eB 2014</p>
       </div>

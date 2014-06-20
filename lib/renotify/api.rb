@@ -19,7 +19,6 @@ module Renotify
         if request.websocket?
           request.websocket do |ws|
             ws.onopen do
-              ws.send("Hello World!")
               settings.sockets << ws
             end
             ws.onmessage do |msg|
