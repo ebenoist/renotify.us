@@ -6,6 +6,7 @@ gem "rake"
 gem "mongoid"
 gem "rack"
 gem "thin"
+gem "sinatra-websocket"
 
 group :development, :test do
   gem "capistrano", "~> 2.15.4"
