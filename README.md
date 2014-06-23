@@ -15,6 +15,7 @@ ReNotify
 ## Usage
 
 > While connected to a browser with websocket support at localhost:9292
+
 `curl -X POST localhost:9292/api/v1/messages -H "Content-Type: application/json" --data '{ "message": "foo bar", "title": "heyo" }'`
 
 ## Contributing
